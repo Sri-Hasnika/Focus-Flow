@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  @apply bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 min-h-screen;
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass-effect {
+  @apply backdrop-blur-lg bg-white/30 border border-white/20;
+}
+
+.todo-input {
+  @apply bg-white/20 border-white/30 text-white placeholder-white/70;
+}
+
+.todo-input::placeholder {
+  @apply text-white/50;
+}
+
+.todo-container {
+  @apply hover:scale-105 transition-transform duration-200;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* DatePicker Custom Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  @apply bg-white rounded-xl shadow-lg border-none;
+}
+
+.react-datepicker__header {
+  @apply bg-purple-500 text-white rounded-t-xl border-none;
+}
+
+.react-datepicker__current-month {
+  @apply text-white;
+}
+
+.react-datepicker__day-name {
+  @apply text-white;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-purple-500;
+}
+
+.react-datepicker__time-container {
+  @apply border-l border-gray-200;
+}
+
+.react-datepicker__time-container .react-datepicker__time {
+  @apply bg-white rounded-br-xl;
+}
+
+.react-datepicker__time-container .react-datepicker__time-box {
+  @apply rounded-br-xl;
+}
