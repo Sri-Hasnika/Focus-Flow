@@ -120,13 +120,14 @@ function App() {
         {!showAddForm ? (
           <motion.button
           onClick={() => setShowAddForm(true)}
-          className="w-full px-6 py-3 bg-white/20 text-white rounded-2xl hover:bg-white/30 transition-colors flex items-center justify-center gap-2 mb-6"
+          className="w-full px-6 py-3 bg-white/20 text-white rounded-2xl hover:bg-white/30 transition-colors flex items-center justify-center gap-2 mb-8"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaMagic className="text-lg" />
           Add New Task
         </motion.button>
+        
         ) : (
           <motion.form 
             onSubmit={handleSubmit}
